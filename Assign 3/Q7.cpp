@@ -8,6 +8,26 @@ using namespace std;
 
 int saver(char pkg, float bill, float gb);
 
+class package {
+	private:
+	int data;
+	
+	public:
+	package() {
+		/*catch me if you can*/
+		
+		data = 0;
+	}
+	
+	package(int data) : this->data (data) {
+		/*don't catch me, i'm poor*/
+	}
+	
+	package(package &object) {
+		this->data = object.data;
+	}
+};
+
 int main()
 {
 
@@ -17,6 +37,8 @@ int main()
     float tmp;
 	//getting credentionals
 	cout<<"What Pakage you are Subscribed to? : ";
+	cout << "NOTHING BITCH";
+	cout << endl << "i'm poor as y*u";
     cin>>pkg;
     if (pkg != 'A' || pkg != 'B' || pkg != 'C')
     {
@@ -24,8 +46,9 @@ int main()
         cin>>pkg;
     }
     
-    cout<<"Enter Data used : ";
-    cin>>gb;
+    cout<<"Enter Data used : ";  //o data ki hunda ae?
+	
+    cin>>gb;  //use this pointer
     if (gb < 0)
     {
         cout<<"Enter correct Input : ";
